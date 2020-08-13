@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        line-height: 1;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center center;
+        background-image: url(cool-background.png);
+        width: 100%;
+        height: 100%;
+      }
+
+      textarea{
+        background: transparent;
+        border: none;
+        resize: none;
+        color: #000000;
+        border-left: 1px solid black;
+        padding: 10px;
+      }
+
+      .jumbotron {
+        text-align: center;
+        background-color: rgb(255, 246, 246);
+        color: black;
+        border-radius: 0;
+        border-bottom: 10px solid black;
+        
+        background: inherit;
+        
+      }
+
+
+      .description{
+        white-space: pre-wrap;
+      }
+
+      /* ???????????????????????????????/ */
+      .time-block{
+        text-align: center;
+        border-radius: 15px;
+      }
+
+      .row {
+        white-space: pre-wrap;
+        height: 80px;
+        border-top: 1px solid white;;
+      }
+
+      .hour {
+        background-color: transparent;
+        color: #000000;
+      }
+
+      .past {
+        background-color: #d3d3d380;
+        color: white;
+      }
+
+      .present {
+        background-color: #ff696173;
+        color: white;
+      }
+
+      .future {
+        background-color: #77dd7777;
+        color: white;
+      }
+
+      .saveBtn {
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        color: rgb(155, 88, 0);
+      }
+
+      .saveBtn i:hover {
+        font-size: 20px;
+        transition: all .3s ease-in-out;
+      }
+
+
+    </style>
+
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+
+    <main class="container">
+      
+      <section class="row" id="h9">
+        <div class="col hour">
+        9 AM
+        </div>
+        <div class="col-sm-8">
+          <textarea class="description" id="9"></textarea>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-light saveBtn" id="save9">Save</button>
+        </div>
+      </section>
+
+      <section class="row" id="h10">
+        <div class="col hour">
+        10 AM
+        </div>
+        <div class="col-sm-8">
+          <textarea class="description" id="10"></textarea>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-light saveBtn" id="save10">Save</button>
+        </div>
+      </section>
+
+      <section class="row" id="h11">
+        <div class="col hour">
+        11 AM
+        </div>
+        <div class="col-sm-8">
+          <textarea class="description" id="11"></textarea>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-light saveBtn" id="save11">Save</button>
+        </div>
+      </section>
+
+      <section class="row" id="h12">
+        <div class="col hour">
+        12 PM
+        </div>
+        <div class="col-sm-8">
+          <textarea class="description" id="12"></textarea>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-light saveBtn" id="save12">Save</button>
+        </div>
+      </section>
+
+      <section class="row" id="h1">
+        <div class="col hour">
+        1 PM
+        </div>
+        <div class="col-sm-8">
+          <textarea class="description" id="1"></textarea>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-light saveBtn"  id="save1">Save</button>
+        </div>
+      </section>
+
+      <section class="row" id="h2">
+        <div class="col hour">
+        2 PM
+        </div>
+        <div class="col-sm-8">
+          <textarea class="description" id="2"></textarea>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-light saveBtn" id="save2">Save</button>
+        </div>
+      </section>
+
+      <section class="row" id="h3">
+        <div class="col hour">
+        3 PM
+        </div>
+        <div class="col-sm-8">
+          <textarea class="description" id="3"></textarea>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-light saveBtn"  id="save3">Save</button>
+        </div>
+      </section>
+
+      <section class="row" id="h4">
+        <div class="col hour">
+        4 PM
+        </div>
+        <div class="col-sm-8">
+          <textarea class="description" id="4"></textarea>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-light saveBtn" id="save4">Save</button>
+        </div>
+      </section>
+
+      <section class="row" id="h5">
+        <div class="col hour">
+        5 PM
+        </div>
+        <div class="col-sm-8">
+          <textarea class="description" id="5"></textarea>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-light saveBtn" id="save5">Save</button>
+        </div>
+      </section>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script>
+      
+      
+// time needs to be constantly updated
+  //make it normal time none of that military bs
+  $("#currentDay").text(moment().format("MMMM D h:mm A"));
+  var hour = moment().format("h");
+  var meridiemX = moment().format("A");
+  
+  //past present and future
+    //Take current hour and highlight it
+      //if DIV matches variable hour, put the class present on it
+      if (hour == 9) {
+        $("#h9").addClass("present");
+        $("#h10").addClass("future");
+        $("#h11").addClass("future");
+        $("#h12").addClass("future");
+        $("#h1").addClass("future");
+        $("#h2").addClass("future");
+        $("#h3").addClass("future");
+        $("#h4").addClass("future");
+        $("#h5").addClass("future");
+      }
+      else if (hour == 10) {
+        $("#h9").addClass("past");
+        $("#h10").addClass("present");
+        $("#h11").addClass("future");
+        $("#h12").addClass("future");
+        $("#h1").addClass("future");
+        $("#h2").addClass("future");
+        $("#h3").addClass("future");
+        $("#h4").addClass("future");
+        $("#h5").addClass("future");
+      }
+      else if (hour == 11) {
+        $("#h9").addClass("past");
+        $("#h10").addClass("past");
+        $("#h11").addClass("present");
+        $("#h12").addClass("future");
+        $("#h1").addClass("future");
+        $("#h2").addClass("future");
+        $("#h3").addClass("future");
+        $("#h4").addClass("future");
+        $("#h5").addClass("future");
+      }
+      else if (hour == 12) {
+        $("#h9").addClass("past");
+        $("#h10").addClass("past");
+        $("#h11").addClass("past");
+        $("#h12").addClass("present");
+        $("#h1").addClass("future");
+        $("#h2").addClass("future");
+        $("#h3").addClass("future");
+        $("#h4").addClass("future");
+        $("#h5").addClass("future");
+      }
+      else if (hour == 1) { 
+        $("#h9").addClass("past");
+        $("#h10").addClass("past");
+        $("#h11").addClass("past");
+        $("#h12").addClass("past");
+        $("#h1").addClass("present");
+        $("#h2").addClass("future");
+        $("#h3").addClass("future");
+        $("#h4").addClass("future");
+        $("#h5").addClass("future");
+      }
+      else if (hour == 2) {
+        $("#h9").addClass("past");
+        $("#h10").addClass("past");
+        $("#h11").addClass("past");
+        $("#h12").addClass("past");
+        $("#h1").addClass("past");
+        $("#h2").addClass("present");
+        $("#h3").addClass("future");
+        $("#h4").addClass("future");
+        $("#h5").addClass("future");
+      }
+      else if (hour == 3) {
+        $("#h9").addClass("past");
+        $("#h10").addClass("past");
+        $("#h11").addClass("past");
+        $("#h12").addClass("past");
+        $("#h1").addClass("past");
+        $("#h2").addClass("past");
+        $("#h3").addClass("present");
+        $("#h4").addClass("future");
+        $("#h5").addClass("future");
+      }
+      else if (hour == 4) {
+        $("#h9").addClass("past");
+        $("#h10").addClass("past");
+        $("#h11").addClass("past");
+        $("#h12").addClass("past");
+        $("#h1").addClass("past");
+        $("#h2").addClass("past");
+        $("#h3").addClass("past");
+        $("#h4").addClass("present");
+        $("#h5").addClass("future");
+      }
+      else if (hour == 5) {
+        $("#h9").addClass("past");
+        $("#h10").addClass("past");
+        $("#h11").addClass("past");
+        $("#h12").addClass("past");
+        $("#h1").addClass("past");
+        $("#h2").addClass("past");
+        $("#h3").addClass("past");
+        $("#h4").addClass("past");
+        $("#h5").addClass("present");
+      }
+      else {
+        $("#h9").removeClass("past");
+        $("#h10").removeClass("past");
+        $("#h11").removeClass("past");
+        $("#h12").removeClass("past");
+        $("#h1").removeClass("past");
+        $("#h2").removeClass("past");
+        $("#h3").removeClass("past");
+        $("#h4").removeClass("past");
+        $("#h5").removeClass("past");
+        
+        $("#h9").removeClass("present");
+        $("#h10").removeClass("present");
+        $("#h11").removeClass("present");
+        $("#h12").removeClass("present");
+        $("#h1").removeClass("present");
+        $("#h2").removeClass("present");
+        $("#h3").removeClass("present");
+        $("#h4").removeClass("present");
+        $("#h5").removeClass("present");
+        
+        $("#h9").removeClass("future");
+        $("#h10").removeClass("future");
+        $("#h11").removeClass("future");
+        $("#h12").removeClass("future");
+        $("#h1").removeClass("future");
+        $("#h2").removeClass("future");
+        $("#h3").removeClass("future");
+        $("#h4").removeClass("future");
+        $("#h5").removeClass("future");
+      }
+
+
+
+//save to local storage
+      
+  $(".saveBtn").on("click", function(event) {
+    event.preventDefault();
+
+    // This line grabs the input from the textbox
+    var $9 = $("#9").val().trim();
+    var $10 = $("#10").val().trim();
+    var $11 = $("#11").val().trim();
+    var $12 = $("#12").val().trim();
+    var $1 = $("#1").val().trim();
+    var $2 = $("#2").val().trim();
+    var $3 = $("#3").val().trim();
+    var $4 = $("#4").val().trim();
+    var $5 = $("#5").val().trim();
+
+    //save to local storage
+    localStorage.setItem("event9", JSON.stringify($9));
+    localStorage.setItem("event10", JSON.stringify($10));
+    localStorage.setItem("event11", JSON.stringify($11));
+    localStorage.setItem("event12", JSON.stringify($12));
+    localStorage.setItem("event1", JSON.stringify($1));
+    localStorage.setItem("event2", JSON.stringify($2));
+    localStorage.setItem("event3", JSON.stringify($3));
+    localStorage.setItem("event4", JSON.stringify($4));
+    localStorage.setItem("event5", JSON.stringify($5));
+  });
+
+  //after page refresh make sure to get items
+  var $9 = JSON.parse(localStorage.getItem("event9"));
+  var $10 = JSON.parse(localStorage.getItem("event10"));
+  var $11 = JSON.parse(localStorage.getItem("event11"));
+  var $12 = JSON.parse(localStorage.getItem("event12"));
+  var $1 = JSON.parse(localStorage.getItem("event1"));
+  var $2 = JSON.parse(localStorage.getItem("event2"));
+  var $3 = JSON.parse(localStorage.getItem("event3"));
+  var $4 = JSON.parse(localStorage.getItem("event4"));
+  var $5 = JSON.parse(localStorage.getItem("event5"));
+
+  $("#9").text($9);
+  $("#10").text($10);
+  $("#11").text($11);
+  $("#12").text($12);
+  $("#1").text($1);
+  $("#2").text($2);
+  $("#3").text($3);
+  $("#4").text($4);
+  $("#5").text($5);
+
+    </script>
+  </body>
+</html>
