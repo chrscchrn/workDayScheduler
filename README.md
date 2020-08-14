@@ -6,7 +6,7 @@ It utilizes JQuery, HTML, CSS, and Moment.js. The user can expect to type and sa
 The tasks are saved via local storage on the browser. The local time imported through Moment.js and it is used to make sure the
 current hour is highlighted red, the past is gray, and the future is green. 
 
-
+NOTE: This program only highlights the past present and future rows during work hours (9 AM ==> 5PM).
 
 
 

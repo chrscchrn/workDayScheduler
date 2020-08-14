@@ -1,4 +1,4 @@
-<!DOCTYPE html>
++<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -237,6 +237,7 @@
   var hour = moment().format("h");
   var meridiemX = moment().format("A");
   
+  
   //past present and future
     //Take current hour and highlight it
       //if DIV matches variable hour, put the class present on it
@@ -340,6 +341,70 @@
         $("#h5").addClass("present");
       }
       else {
+        $("#h9").removeClass("past");
+        $("#h10").removeClass("past");
+        $("#h11").removeClass("past");
+        $("#h12").removeClass("past");
+        $("#h1").removeClass("past");
+        $("#h2").removeClass("past");
+        $("#h3").removeClass("past");
+        $("#h4").removeClass("past");
+        $("#h5").removeClass("past");
+        
+        $("#h9").removeClass("present");
+        $("#h10").removeClass("present");
+        $("#h11").removeClass("present");
+        $("#h12").removeClass("present");
+        $("#h1").removeClass("present");
+        $("#h2").removeClass("present");
+        $("#h3").removeClass("present");
+        $("#h4").removeClass("present");
+        $("#h5").removeClass("present");
+        
+        $("#h9").removeClass("future");
+        $("#h10").removeClass("future");
+        $("#h11").removeClass("future");
+        $("#h12").removeClass("future");
+        $("#h1").removeClass("future");
+        $("#h2").removeClass("future");
+        $("#h3").removeClass("future");
+        $("#h4").removeClass("future");
+        $("#h5").removeClass("future");
+      }
+      
+      if (meridiemX == 'PM' && parseInt(hour) > 5) {
+        $("#h9").removeClass("past");
+        $("#h10").removeClass("past");
+        $("#h11").removeClass("past");
+        $("#h12").removeClass("past");
+        $("#h1").removeClass("past");
+        $("#h2").removeClass("past");
+        $("#h3").removeClass("past");
+        $("#h4").removeClass("past");
+        $("#h5").removeClass("past");
+        
+        $("#h9").removeClass("present");
+        $("#h10").removeClass("present");
+        $("#h11").removeClass("present");
+        $("#h12").removeClass("present");
+        $("#h1").removeClass("present");
+        $("#h2").removeClass("present");
+        $("#h3").removeClass("present");
+        $("#h4").removeClass("present");
+        $("#h5").removeClass("present");
+        
+        $("#h9").removeClass("future");
+        $("#h10").removeClass("future");
+        $("#h11").removeClass("future");
+        $("#h12").removeClass("future");
+        $("#h1").removeClass("future");
+        $("#h2").removeClass("future");
+        $("#h3").removeClass("future");
+        $("#h4").removeClass("future");
+        $("#h5").removeClass("future");
+      }
+
+      if (meridiemX == 'AM' && parseInt(hour) < 9) {
         $("#h9").removeClass("past");
         $("#h10").removeClass("past");
         $("#h11").removeClass("past");
